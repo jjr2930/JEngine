@@ -15,13 +15,24 @@ namespace JEngine
             void SetFloat(std::wstring& name, float value);
             void SetTrigger(std::wstring& name);
 
+            void UseTrigger(std::wstring name);
+
             int GetInt(std::wstring& name);
             bool GetBool(std::wstring& name);
-            float GetFloat(std::wstring& name);           
+            float GetFloat(const std::wstring& name);           
+            bool GetTrigger(std::wstring& name);
 
+            void SetCurrentState(State* ptrCurrent);
+            void SetNextState(State* ptrNext);
+            
+            State* GetCurrentState();
+            State* GetNextState();
+
+            void Update();
         private:
             State* root = nullptr;
             State* m_ptrCurrentState = nullptr;
+            State* m_ptrNextState = nullptr;
             
             std::unordered_map<std::wstring, bool> m_MBoolValue;
             std::unordered_map<std::wstring, int> m_MIntValue;

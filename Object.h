@@ -1,46 +1,21 @@
 #pragma once
 #include "JConst.h"
+#include <string>
 namespace JEngine
 {
     class Object
     {
     public:
-        Object()
-        {
-            m_cPtrName = L"NewObject";
-            m_iObjectID = m_iID++;
-        }
-        Object(char* cptrName, UINT iSize)
-        {
-            m_cPtrName = L"NewObject";
-        }
-
-#pragma region Getter
-        UINT GetObjectID() const
-        {
-            return m_iObjectID;
-        }
-        std::wstring GetName() const
-        {
-            return m_cPtrName;
-        }
-#pragma endregion
-
-#pragma region Setter
-        void SetObjectID(const int& iNewID)
-        {
-            m_iObjectID = iNewID;
-        }
-        void SetName(std::wstring cPtrNewName)
-        {
-            m_cPtrName = cPtrNewName;
-        }
-#pragma endregion
-
+        Object();
+        Object(char* cptrName, UINT iSize);
+        UINT GetObjectID() const;
+        std::wstring GetName() const;
+        void SetObjectID(const int& iNewID);
+        void SetName(std::wstring cPtrNewName);
 
     protected:
         static UINT m_iID;
         UINT m_iObjectID;
-        std::wstring m_cPtrName = nullptr;
+        std::wstring m_name = nullptr;
     };
 }
