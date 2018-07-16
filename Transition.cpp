@@ -42,10 +42,11 @@ void JEngine::FSM::Transition::Update()
     }
 }
 
-JEngine::FSM::Transition::Transition(State * ptrStartState, State * ptrEndState)
+JEngine::FSM::Transition::Transition(std::wstring name, State* ptrStartState, State* ptrEndState)
 {
     m_ptrStart = ptrStartState;
     m_ptrEnd = ptrEndState;
+    m_name = name;
 }
 
 JEngine::FSM::Transition::~Transition()

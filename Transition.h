@@ -14,7 +14,7 @@ namespace JEngine
         {
         public:
             Transition(){}
-            Transition(State* ptrStartState, State* ptrEndState);
+            Transition(std::wstring name, State* ptrStartState, State* ptrEndState);
             ~Transition();
             
             State* GetStartState();
