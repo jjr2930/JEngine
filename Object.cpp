@@ -1,14 +1,16 @@
 #include "Object.h"
 
+UINT JEngine::Object::m_iID = 0;
+
 JEngine::Object::Object()
 {
     m_name = L"NewObject";
     m_iObjectID = m_iID++;
 }
 
-JEngine::Object::Object(char * cptrName, UINT iSize)
+JEngine::Object::Object(std::wstring cptrName)
 {
-    m_name = L"NewObject";
+    m_name = cptrName;
 }
 
 UINT JEngine::Object::GetObjectID() const

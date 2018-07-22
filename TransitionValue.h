@@ -2,6 +2,7 @@
 #include "Object.h"
 #include "Log.h"
 #include "ConditionValue.h"
+#include "FSMController.h"
 
 namespace JEngine
 {
@@ -109,7 +110,8 @@ namespace JEngine
                     case E_TVCT::Equal:         return this->m_value == controllerValue;
                     case E_TVCT::Smaller:       return this->m_value < controllerValue;
                     case E_TVCT::SmallAndEqual: return this->m_value <= controllerValue;
-                    default:
+                    default: 
+                        break;
                 }
 
                 return false;
@@ -146,6 +148,7 @@ namespace JEngine
                     case E_TVCT::Smaller:       return this->m_value < controllerValue;
                     case E_TVCT::SmallAndEqual: return this->m_value <= controllerValue;
                     default:
+                        break;
                 }
 
                 return false;

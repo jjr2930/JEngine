@@ -7,7 +7,7 @@ namespace JEngine
     {
     public:
         Object();
-        Object(char* cptrName, UINT iSize);
+        Object(std::wstring cptrName);
         UINT GetObjectID() const;
         std::wstring GetName() const;
         void SetObjectID(const int& iNewID);

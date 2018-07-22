@@ -14,16 +14,8 @@ namespace JEngine
     {
     public:
         const wchar_t* FILE_NAME = L"Log.txt";
-        void PrintLog(const wchar_t* _Format, ... )
-        {   
-            m_strResult.clear();
-            va_list list;
-            va_start(list, _Format);
-
-            va_end(list);
-
-            wprintf(_Format );
-        }
+        void PrintLog(const wchar_t* _Format, ...);
+        
 
     private:
         std::wstring m_strResult;

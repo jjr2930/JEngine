@@ -1,4 +1,11 @@
 #include "State.h"
+#include "Transition.h"
+
+JEngine::FSM::State::State(std::wstring name, StateMachine* parent)
+    :Object(name), 
+     m_PtrParent(parent)
+{        
+}
 
 JEngine::FSM::State::~State()
 {
@@ -13,17 +20,18 @@ JEngine::FSM::State::~State()
     m_mapTransition.clear();
 }
 
-JEngine::FSM::Transition* JEngine::FSM::State::AddTransition(std::wstring name, State * endState)
+JEngine::FSM::Transition* JEngine::FSM::State::CreateTransition(std::wstring name, State * endState)
 {
     Transition* newTransition = new Transition(name, this, endState);
     auto foundedIter = m_mapTransition.find(name);
     if (foundedIter == m_mapTransition.end())
     {
         m_mapTransition.insert({ name, newTransition });
-        return;
+        return newTransition;
     }
 
     LOG(L"%s is already exist\n", newTransition->GetName().c_str());
+    return nullptr;
 }
 
 void JEngine::FSM::State::RemoveTransition(const std::wstring & key)
@@ -36,4 +44,19 @@ void JEngine::FSM::State::RemoveTransition(const std::wstring & key)
     }
 
     LOG(L"%s Is not exist\n", key.c_str());
+}
+
+void JEngine::FSM::State::Update()
+{
+    for (auto iter = m_mapTransition.begin(); 
+        iter != m_mapTransition.end();
+        ++iter)
+    {
+        Transition* curTransition = iter->second;
+        curTransition->Update();
+        if (curTransition->IsCompleted())
+        {
+            
+        }
+    }
 }

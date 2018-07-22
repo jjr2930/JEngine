@@ -7,9 +7,15 @@ namespace JEngine
     {        
         class StateMachine : public State
         {
-        private:
-            State * startState;
+        public:
+            void Enter() override;
+            void Update() override;
+            void Exit() override;
 
+        private:
+            State*                      mPtrRootState       = nullptr;
+            State*                      mPtrCurrentState    = nullptr;
+            std::vector<Transition*>    mTransitions;
         };
     }
 }

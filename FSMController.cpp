@@ -5,25 +5,21 @@
 void JEngine::FSM::FSMController::SetInt(std::wstring & name, int value)
 {
     m_MIntValue[name] = value;
-    m_ptrCurrentState->SetInt(name, value);
 }
 
 void JEngine::FSM::FSMController::SetBool(std::wstring & name, bool value)
 {
     m_MBoolValue[name] = value;
-    m_ptrCurrentState->SetBool(name, value);
 }
 
 void JEngine::FSM::FSMController::SetFloat(std::wstring & name, float value)
 {
     m_MFloatValue[name] = value;
-    m_ptrCurrentState->SetFloat(name, value);
 }
 
 void JEngine::FSM::FSMController::SetTrigger(std::wstring & name)
 {
     m_MTriggerValue[name] = true;
-    m_ptrCurrentState->SetTrigger(name);
 }
 
 void JEngine::FSM::FSMController::UseTrigger(std::wstring name)

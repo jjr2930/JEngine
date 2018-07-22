@@ -37,9 +37,12 @@ void JEngine::FSM::Transition::Update()
                 m_ptrController->UseTrigger(iter->second->GetLookUpName());
             }
         }
-
-        m_ptrController->SetNextState(m_ptrEnd);
     }
+}
+
+bool JEngine::FSM::Transition::IsCompleted()
+{
+    return m_bCompleted;
 }
 
 JEngine::FSM::Transition::Transition(std::wstring name, State* ptrStartState, State* ptrEndState)

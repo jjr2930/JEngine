@@ -28,6 +28,8 @@ namespace JEngine
             void RemoveTransitionValue(const std::wstring& key);
             void Update();
 
+            bool IsCompleted();
+
         private:
             State*          m_ptrStart      = nullptr;
             State*          m_ptrEnd        = nullptr;
