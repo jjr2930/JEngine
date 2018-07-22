@@ -24,6 +24,7 @@
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>FSM</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.16299.0</WindowsTargetPlatformVersion>
+    <ProjectName>JEngine</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -158,14 +159,18 @@
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Object.h" />
     <ClInclude Include="Transition.h" />
+    <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="FSMController.cpp" />
+    <ClCompile Include="Log.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="State.cpp" />
+    <ClCompile Include="StateMachine.cpp" />
     <ClCompile Include="Transition.cpp" />
     <ClCompile Include="TransitionValue.cpp" />
+    <ClCompile Include="Vector3.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
