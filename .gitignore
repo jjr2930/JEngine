@@ -37,3 +37,12 @@
 /Debug/main.obj
 /Debug/vc141.idb
 /Debug/vc141.pdb
+/.vs/JEngine/v15/ipch/AutoPCH/3526420eaa70f9a8/*.ipch
+*.ipch
+.vs
+*.obj
+/Debug/Configure.txt
+/Debug/JEngine.Build.CppClean.log
+/Debug/JEngine.tlog/rc.command.1.tlog
+/Debug/JEngine.tlog/rc.read.1.tlog
+/Debug/JEngine.tlog/rc.write.1.tlog
