@@ -15,9 +15,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="main.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="BuiltinComponents\JComponent.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -153,6 +150,12 @@
       <Filter>헤더 파일</Filter>
     </ClInclude>
     <ClInclude Include="JGame.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\JMathHeader.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Math\DirectX12\JMath_DX12.h">
       <Filter>헤더 파일</Filter>
     </ClInclude>
   </ItemGroup>

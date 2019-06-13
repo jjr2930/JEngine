@@ -1,19 +1,21 @@
 #include <iostream>
-#include "DataStructure\JList.h"
-#include "JGameObject.h"
-#include "BuiltinComponents\TestComponent.h"
-#include "TestCode\AttackComponent.h"
-#include "JScene.h"
-#include "OSDepenciesCode\OSDC_Header.h"
-#include "GameConfiguration.h"
-#include "JJobManager.h"
-#include "DataStructure\JQueue.h"
+#include "..\JEngine\DataStructure\JList.h"
+#include "..\JEngine\JGameObject.h"
+#include "..\JEngine\BuiltinComponents\TestComponent.h"
+#include "..\JEngine\TestCode\AttackComponent.h"
+#include "..\JEngine\JScene.h"
+#include "..\JEngine\OSDepenciesCode\OSDC_Header.h"
+#include "..\JEngine\GameConfiguration.h"
+#include "..\JEngine\JJobManager.h"
+#include "..\JEngine\DataStructure\JQueue.h"
 #include <vector>
 #include <tchar.h>
 #include <Windows.h>
-#include "Renderers\DirectX12\JNativeRenderer_DX12.h"
-#include "JLogger.h"
+#include "..\JEngine\Renderers\JNativeRendererHeader.h"
+#include "..\JEngine\JLogger.h"
+#include "../JEngine/Math/JMathHeader.h"
 
+using namespace DirectX;
 using namespace JSample;
 using namespace std;
 
@@ -140,8 +142,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 		// For this introduction, we just print out "Hello, Windows desktop!"
 		// in the top left corner.
 		TextOut(hdc, 5, 5, greeting, _tcslen(greeting));
-		// End application-specific layout section.
 
+		// End application-specific layout section.
 		EndPaint(hWnd, &ps);
 		break;
 	case WM_DESTROY:

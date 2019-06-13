@@ -9,3 +9,4 @@ TestApp.VC.VC.opendb
 *.exe
 *.ilk
 *.log
+x64/Debug/JEngine.lib
