@@ -19,7 +19,7 @@ void JSample::JLogger::LogWarnning(const wstring & warnningLog)
 
 void JSample::JLogger::LogError(const wstring & errorLog)
 {
-	LogError(errorLog);
+	GetInstance()->OnLogError(errorLog);
 }
 
 void JSample::JLogger::OnLog(const wstring & log)
