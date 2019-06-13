@@ -1,2 +1,11 @@
 
 TestApp.VC.db
+TestApp.VC.VC.opendb
+*.pdb
+*.idb
+*.lastbuildstate
+*.tlog
+*.obj
+*.exe
+*.ilk
+*.log
